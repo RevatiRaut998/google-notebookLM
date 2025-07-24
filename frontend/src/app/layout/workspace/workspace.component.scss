@@ -1,0 +1,19 @@
+.workspace-container {
+  display: flex;
+  gap: 1rem;
+  height: calc(100vh - 80px); // adjust based on your topbar height
+  overflow: hidden;
+
+  .pdf-section,
+  .chat-section {
+    flex: 1;
+    overflow-y: auto;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+  }
+
+  .pdf-section {
+    border-right: 1px solid #ddd;
+  }
+}

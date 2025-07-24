@@ -1,0 +1,19 @@
+<div class="pdf-container">
+  <input type="file" accept="application/pdf" (change)="onFileSelected($event)" />
+
+  <div *ngIf="pdfSrc" class="pdf-viewer">
+    <pdf-viewer
+      [src]="pdfSrc"
+      [page]="currentPage"
+      style="display: block;"
+      (after-load-complete)="onPdfLoaded($event)"
+>
+    </pdf-viewer>
+
+    <div class="pdf-controls" *ngIf="isPdfLoaded">
+      <button (click)="prevPage()" [disabled]="currentPage === 1">Prev</button>
+      <span>Page {{ currentPage }} / {{ totalPages }}</span>
+      <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+    </div>
+  </div>
+</div>
