@@ -1,21 +1,56 @@
+
+
+// .workspace-container {
+//   display: flex;
+//   gap: 1rem;
+//   height: calc(100vh - 80px); // adjust based on your topbar height
+//   width: 100vw; // ensure it uses full viewport width
+//   overflow: hidden;
+
+//   .pdf-section {
+//     flex: 3; // wider PDF section
+//     min-width: 0; // allow shrinking
+//     overflow-y: auto;
+//     border-radius: 8px;
+//     padding: 1rem;
+//     background-color: #f9f9f9;
+//     border-right: 1px solid #ddd;
+//   }
+
+//   .chat-section {
+//     flex: 1; // smaller chat section
+//     min-width: 0; // allow shrinking
+//     overflow-y: auto;
+//     border-radius: 8px;
+//     padding: 1rem;
+//     background-color: #f9f9f9;
+//   }
+// }
+
 .workspace-container {
   display: flex;
-  gap: 1rem;
-  height: calc(100vh - 80px); // adjust based on your topbar height
+  height: 100vh; // use full viewport height
+  width: 100vw; // use full viewport width
   overflow: hidden;
 
-  .pdf-section,
-  .chat-section {
-    flex: 1;
+  .pdf-section {
+    flex: 3 1 0%;
+    min-width: 0;
     overflow-y: auto;
+    overflow-x: hidden;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-right: 1px solid #ddd;
+  }
+
+  .chat-section {
+    flex: 1 1 0%;
+    min-width: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
     border-radius: 8px;
     padding: 1rem;
     background-color: #f9f9f9;
   }
-
-  .pdf-section {
-    border-right: 1px solid #ddd;
-  }
 }
-
-
