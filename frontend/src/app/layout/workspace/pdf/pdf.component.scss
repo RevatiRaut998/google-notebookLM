@@ -1,16 +1,25 @@
 .pdf-container {
   padding: 1rem;
 
-  input[type="file"] {
+  input[type='file'] {
     margin-bottom: 1rem;
   }
 
-  .pdf-viewer {
+  ::ng-deep pdf-viewer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80vh;
     border: 1px solid #ccc;
     padding: 0.5rem;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    max-height: 80vh;
-    overflow-y: auto;
+    overflow: auto;
+
+    canvas {
+      width: 100% !important;
+      height: auto !important;
+    }
   }
 
   .pdf-controls {
@@ -19,10 +28,19 @@
     align-items: center;
     margin-top: 1rem;
     gap: 1rem;
+    flex-wrap: wrap;
 
     button {
       padding: 0.4rem 1rem;
       cursor: pointer;
     }
+
+    .jump-input {
+      width: 100px;
+      padding: 0.4rem;
+      text-align: center;
+    }
   }
 }
+
+
